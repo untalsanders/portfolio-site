@@ -60,7 +60,7 @@ svg {
 .header__container,
 .page__container,
 .footer__main {
-    max-width: clamp(calc(20rem - 2.5rem), 80vw, 90vw);
+    max-width: clamp(calc(20rem - 1.25rem), 80vw, 90vw);
     margin-left: auto;
     margin-right: auto;
 }
