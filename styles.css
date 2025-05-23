@@ -1,7 +1,11 @@
 :root {
+    /* Colors */
     --color-primary: #181818;
     --color-secondary: #f4f4f4;
+
+    /* Fonts */
     --font-family: 'Inter', system-ui, sans-serif;
+
     line-height: 1.6;
     font-weight: 400;
     text-rendering: optimizeLegibility;
@@ -44,7 +48,6 @@ img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    vertical-align: middle;
     display: block;
 }
 
@@ -74,12 +77,12 @@ img {
 .logo__link {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .logo__text {
-    font-size: 2rem;
-    font-weight: 900;
+    font-size: 1.7rem;
+    font-weight: 700;
 }
 
 .nav {
@@ -87,13 +90,98 @@ img {
     align-items: center;
 }
 
+.nav--header {
+    position: relative;
+}
+
+.nav__toggle-checkbox {
+    display: none;
+}
+
+.nav__toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
 .nav--header .nav__link {
     padding: 1rem;
+    display: block;
 }
 
 .nav--header .nav__link:hover {
     background-color: red;
     color: white;
+}
+
+/* Media Query for Hamburger Menu Activation */
+@media (width <= 48rem) {
+    .nav__toggle-label {
+        display: block;
+    }
+
+    .nav--header .nav__list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--color-secondary);
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav__toggle-checkbox:checked ~ .nav__list {
+        display: flex;
+    }
+
+    .nav--header .nav__link {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .nav--header .nav__link:last-child {
+        border-bottom: none;
+    }
+
+    .nav--header .nav__link:hover {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+    }
+}
+
+@media (width >= 48.0625rem) {
+    .nav__toggle-label {
+        display: none !important;
+    }
+
+    .nav--header .nav__list {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        border-top: none;
+        box-shadow: none;
+    }
+
+    .nav--header .nav__link {
+        padding: 1rem;
+        width: auto;
+        text-align: left;
+        border-bottom: none;
+    }
+
+    .nav--header .nav__link:hover {
+        background-color: red;
+        color: white;
+    }
 }
 
 .page__main {
