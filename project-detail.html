@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="images/logo-circle.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="logo">
+                <a href="/" class="logo__link">
+                    <img src="images/logo-circle.svg" alt="Logo" class="logo__image">
+                    <span class="logo__text">Portfolio</span>
+                </a>
+            </h1>
+            <nav class="nav nav--header">
+                <input type="checkbox" class="nav__toggle-checkbox" id="nav-toggle">
+                <label for="nav-toggle" class="nav__toggle-label">
+                    <svg viewBox="0 0 100 80" width="24" height="24" fill="#181818">
+                        <rect y="0" width="100" height="10" rx="8"></rect>
+                        <rect y="30" width="100" height="10" rx="8"></rect>
+                        <rect y="60" width="100" height="10" rx="8"></rect>
+                    </svg>
+                </label>
+                <div class="nav__list">
+                    <a href="#" class="nav__link">Contacto</a>
+                    <a href="#" class="nav__link">Inicio de sesión</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="page__main">
+        <div class="page__container">
+            <div class="project-detail">
+                <div class="project-detail__images">
+                    <img src="images/img-10.avif" alt="Imagen del proyecto" class="project-detail__image">
+                </div>
+                <h2 class="project-detail__title">Portfolio Blog Starter</h2>
+                <p class="project-detail__description">Esta es una plantilla de sitio de portafolio con blog incluido. Incluye:</p>
+                <ul>
+                    <li>Compatibilidad con MDX y Markdown</li>
+                    <li>Optimizado para SEO (mapa del sitio, robots, esquema JSON-LD)</li>
+                    <li>Fuente RSS</li>
+                    <li>Imágenes OG dinámicas</li>
+                    <li>Resaltado de sintaxis</li>
+                    <li>Tailwind v4</li>
+                    <li>Análisis de velocidad de Vercel / Análisis web</li>
+                    <li>Fuente Geist</li>
+                </ul>
+                <h3>Demostración</h3>
+                <p><a href="https://portfolio-blog-starter.vercel.app">https://portfolio-blog-starter.vercel.app</a></p>
+                <h3>Cómo usar</h3>
+                <p>Puede elegir uno de los dos métodos siguientes para utilizar este repositorio:</p>
+                <h3>Implementación con un solo clic</h3>
+                <p>Implemente el ejemplo usando <a href="https://vercel.com/?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples">Vercel:</a></p>
+                <h3>Clonar y Implementar</h3>
+                <p>Ejecute <code>create-next-app</code> con <a href="http://pnpm.io/installation">pnpm</a> para iniciar el ejemplo:</p>
+                <pre><code>pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog</code></pre>
+                <p>Luego, ejecute Next.js en modo de desarrollo:</p>
+                <pre><code>pnpm dev</code></pre>
+                <p>Impléndelo en la nube con <a href="https://vercel.com/templates">Vercel</a> <a href="https://nextjs.org/docs/app/building-your-application/deploying">(Documentación)</a>.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="footer__copyright">
+                &copy; 2025 Sanders Gutiérrez. Todos los derechos reservados.
+            </div>
+            <div class="footer__attribution">
+                Hecho con
+                <svg class="footer__icon" width="16px" height="16px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#00000000">
+                    <path d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z" fill="#ee1100"></path>
+                </svg>
+                <a href="https://untalsanders.com" class="footer__attribution-link">UnTalSanders</a>
+            </div>
+            <nav class="nav nav--footer">
+                <a class="nav__link" href="#">Términos de uso</a>
+                <a class="nav__link" href="#">Política de privacidad</a>
+                <a class="nav__link" href="#">Contacto</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
