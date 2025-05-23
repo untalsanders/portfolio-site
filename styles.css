@@ -258,22 +258,16 @@ svg {
 .project-card__links {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
-    padding-top: 0.75rem;
+    align-items: center;
     border-top: 1px solid #f0f0f0;
 }
 
-.project-card__label {
-    font-size: 0.85rem;
-    color: #333;
-}
-
 .project-card__link {
+    font-size: 0.85rem;
+    color: #777;
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    gap: .25rem;
 }
 
 .project-card__link:hover {
