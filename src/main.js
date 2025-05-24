@@ -1,3 +1,5 @@
+import './styles.css'
+
 class ProjectList extends HTMLElement {
     constructor() {
         super()
