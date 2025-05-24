@@ -65,6 +65,12 @@
 
     <template id="project-list-template">
         <style>
+            *, *::before, *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
             p {
                 margin-bottom: 0.75rem;
             }
@@ -81,27 +87,6 @@
                 height: auto;
                 object-fit: cover;
                 display: block;
-            }
-
-            svg {
-                display: block;
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-
-            .project-overview {
-                text-align: center;
-                padding: 2.25rem 0;
-            }
-
-            .project-overview__title {
-                font-size: 2.25rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .project-overview__text {
-                font-size: 1.625rem;
-                color: #505050;
             }
 
             .project-list {
