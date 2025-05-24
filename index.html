@@ -8,298 +8,459 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__container">
-            <h1 class="logo">
-                <a href="/" class="logo__link">
-                    <img src="images/logo-circle.svg" alt="Logo" class="logo__image">
-                    <span class="logo__text">Portfolio</span>
-                </a>
-            </h1>
-            <nav class="nav nav--header">
-                <input type="checkbox" class="nav__toggle-checkbox" id="nav-toggle">
-                <label for="nav-toggle" class="nav__toggle-label">
-                    <svg viewBox="0 0 100 80" width="24" height="24" fill="#181818">
-                        <rect y="0" width="100" height="10" rx="8"></rect>
-                        <rect y="30" width="100" height="10" rx="8"></rect>
-                        <rect y="60" width="100" height="10" rx="8"></rect>
-                    </svg>
-                </label>
-                <div class="nav__list">
-                    <a href="#" class="nav__link">Contacto</a>
-                    <a href="#" class="nav__link">Inicio de sesión</a>
+    <div id="app">
+        <header class="header">
+            <div class="header__container">
+                <h1 class="logo">
+                    <a href="/" class="logo__link">
+                        <img src="images/logo-circle.svg" alt="Logo" class="logo__image">
+                        <span class="logo__text">Portfolio</span>
+                    </a>
+                </h1>
+                <nav class="nav nav--header">
+                    <input type="checkbox" class="nav__toggle-checkbox" id="nav-toggle">
+                    <label for="nav-toggle" class="nav__toggle-label">
+                        <svg viewBox="0 0 100 80" width="24" height="24" fill="#181818">
+                            <rect y="0" width="100" height="10" rx="8"></rect>
+                            <rect y="30" width="100" height="10" rx="8"></rect>
+                            <rect y="60" width="100" height="10" rx="8"></rect>
+                        </svg>
+                    </label>
+                    <div class="nav__list">
+                        <a href="#" class="nav__link">Contacto</a>
+                        <a href="#" class="nav__link">Inicio de sesión</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="page__main">
+            <div class="page__container">
+                <section class="project-overview">
+                    <h1 class="project-overview__title">Explorar Proyectos</h1>
+                    <p class="project-overview__text">Aquí podrás encontrar los proyectos en los que he trabajado.</p>
+                </section>
+                <project-list></project-list>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__main">
+                <div class="footer__copyright">
+                    &copy; 2025 Sanders Gutiérrez. Todos los derechos reservados.
                 </div>
-            </nav>
-        </div>
-    </header>
-    <main class="page__main">
-        <div class="page__container">
-            <section class="project-overview">
-                <h1 class="project-overview__title">Explorar Proyectos</h1>
-                <p class="project-overview__text">Aquí podrás encontrar los proyectos en los que he trabajado.</p>
-            </section>
-            <section class="project-list">
-                <article class="project-card">
-                    <img src="images/img-1.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Kit de inicio para Blogs</h2>
-                    <p class="project-card__text">Un ejemplo de blog generado estáticamente utilizando Next.js y Markdown.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#fffa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-2.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Plantilla de SvelteKit</h2>
-                    <p class="project-card__text">Una aplicación SvelteKit que incluye rutas anidadas, diseños y puntos finales de página.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-3.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Blog ISR con Next.js y WordPress</h2>
-                    <p class="project-card__text">Ejemplo de blog de regeneración estática incremental con Next.js y WordPress.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-4.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Galería de imágenes</h2>
-                    <p class="project-card__text">Una galería de imágenes basada en Next.js y Cloudinary.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-5.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Comercio Next.js</h2>
-                    <p class="project-card__text">Kit de inicio para el comercio de alto rendimiento con Shopify.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-6.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Chatbot de inteligencia artificial con Next.js</h2>
-                    <p class="project-card__text">Un chatbot de inteligencia artificial Next.js completo y pirateable creado por Vercel.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-7.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Blog con edición nativa de contenidos</h2>
-                    <p class="project-card__text">Un blog potenciado por Sanity con edición nativa de contenidos y previsualizaciones instantáneas.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-8.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Plantilla de Next.js</h2>
-                    <p class="project-card__text">Empieza a usar Next.js y React en segundos.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-9.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Plantilla de Next.js para empresas</h2>
-                    <p class="project-card__text">Plantilla Next.js de nivel empresarial creada con Tailwind CSS, Radix UI, TypeScript, ESLint, Prettier, Jest, Playwright, Storybook, etc.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/img-10.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
-                    <h2 class="project-card__title">Portafolio de Next.js con Blog</h2>
-                    <p class="project-card__text">Crea un portafolio fácilmente con Next.js y Markdown.</p>
-                    <div class="project-card__links">
-                        <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
-                            Ver Proyecto
-                            <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
-                                <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
-                            </svg>
-                        </a>
-                        <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
-                            <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-            </section>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="footer__main">
-            <div class="footer__copyright">
-                &copy; 2025 Sanders Gutiérrez. Todos los derechos reservados.
+                <div class="footer__attribution">
+                    Hecho con
+                    <svg class="footer__icon" width="16px" height="16px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#00000000">
+                        <path d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z" fill="#ee1100"></path>
+                    </svg>
+                    <a href="https://untalsanders.com" class="footer__attribution-link">UnTalSanders</a>
+                </div>
+                <nav class="nav nav--footer">
+                    <a class="nav__link" href="#">Términos de uso</a>
+                    <a class="nav__link" href="#">Política de privacidad</a>
+                    <a class="nav__link" href="#">Contacto</a>
+                </nav>
             </div>
-            <div class="footer__attribution">
-                Hecho con
-                <svg class="footer__icon" width="16px" height="16px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#00000000">
-                    <path d="M1.24264 8.24264L8 15L14.7574 8.24264C15.553 7.44699 16 6.36786 16 5.24264V5.05234C16 2.8143 14.1857 1 11.9477 1C10.7166 1 9.55233 1.55959 8.78331 2.52086L8 3.5L7.21669 2.52086C6.44767 1.55959 5.28338 1 4.05234 1C1.8143 1 0 2.8143 0 5.05234V5.24264C0 6.36786 0.44699 7.44699 1.24264 8.24264Z" fill="#ee1100"></path>
-                </svg>
-                <a href="https://untalsanders.com" class="footer__attribution-link">UnTalSanders</a>
+        </footer>
+    </div>
+
+    <template id="project-list-template">
+        <style>
+            p {
+                margin-bottom: 0.75rem;
+            }
+
+            a {
+                font-weight: 500;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                display: block;
+            }
+
+            svg {
+                display: block;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            .project-overview {
+                text-align: center;
+                padding: 2.25rem 0;
+            }
+
+            .project-overview__title {
+                font-size: 2.25rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .project-overview__text {
+                font-size: 1.625rem;
+                color: #505050;
+            }
+
+            .project-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+                gap: 1.25rem;
+                padding: 2rem 0;
+            }
+
+            .project-card {
+                background-color: #ffffff;
+                border: 1px solid #e0e0e0;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            }
+
+            .project-card__image {
+                height: 12.5rem;
+                object-fit: cover;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .project-card__title,
+            .project-card__text,
+            .project-card__links {
+                padding: 1rem;
+            }
+
+            .project-card__title {
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+
+            .project-card__text {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                flex-grow: 1;
+            }
+
+            .project-card__links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid #f0f0f0;
+            }
+
+            .project-card__link {
+                font-size: 0.85rem;
+                color: #777;
+                gap: .25rem;
+            }
+
+            .project-card__link:hover {
+                color: var(--color-primary);
+            }
+
+            .project-card__icon {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+
+            .project-card__link--read-more {
+                display: flex;
+                align-items: center;
+                background-color: var(--color-primary);
+                padding: .5rem 1rem;
+                border-radius: 0.375rem;
+                color: #fff;
+                font-weight: 600;
+            }
+
+            .project-card__link--read-more:hover {
+                background-color: rgba(0,0,0,.85);
+                color: rgba(255, 255, 255, .9);
+                transition: background-color 0.3s ease;
+                transition: color 0.3s ease;
+            }
+        </style>
+
+        <section class="project-list">
+            <article class="project-card">
+                <img src="images/img-1.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Kit de inicio para Blogs</h2>
+                <p class="project-card__text">Un ejemplo de blog generado estáticamente utilizando Next.js y Markdown.</p>
+                <div class="project-card__links">
+                    <a href="#/project" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#fffa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-2.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Plantilla de SvelteKit</h2>
+                <p class="project-card__text">Una aplicación SvelteKit que incluye rutas anidadas, diseños y puntos finales de página.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-3.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Blog ISR con Next.js y WordPress</h2>
+                <p class="project-card__text">Ejemplo de blog de regeneración estática incremental con Next.js y WordPress.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-4.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Galería de imágenes</h2>
+                <p class="project-card__text">Una galería de imágenes basada en Next.js y Cloudinary.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-5.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Comercio Next.js</h2>
+                <p class="project-card__text">Kit de inicio para el comercio de alto rendimiento con Shopify.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-6.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Chatbot de inteligencia artificial con Next.js</h2>
+                <p class="project-card__text">Un chatbot de inteligencia artificial Next.js completo y pirateable creado por Vercel.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-7.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Blog con edición nativa de contenidos</h2>
+                <p class="project-card__text">Un blog potenciado por Sanity con edición nativa de contenidos y previsualizaciones instantáneas.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-8.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Plantilla de Next.js</h2>
+                <p class="project-card__text">Empieza a usar Next.js y React en segundos.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-9.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Plantilla de Next.js para empresas</h2>
+                <p class="project-card__text">Plantilla Next.js de nivel empresarial creada con Tailwind CSS, Radix UI, TypeScript, ESLint, Prettier, Jest, Playwright, Storybook, etc.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/img-10.avif" alt="Proyecto Nextjs" width="300" height="200" class="project-card__image">
+                <h2 class="project-card__title">Portafolio de Next.js con Blog</h2>
+                <p class="project-card__text">Crea un portafolio fácilmente con Next.js y Markdown.</p>
+                <div class="project-card__links">
+                    <a href="./project-detail.html" class="project-card__link project-card__link--read-more">
+                        Ver Proyecto
+                        <svg class="project-card__icon project-card__icon--read-more" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/untalsanders/portfolio-site" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" width="24px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35"></path>
+                            <path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff"></path>
+                        </svg>
+                    </a>
+                    <a href="https://portfolio.untalsanders.com" target="_blank" class="project-card__link">
+                        <svg class="project-card__icon" data-testid="geist-icon" height="24" stroke-linejoin="round" viewBox="0 0 16 16" width="24" style="color: currentcolor;">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.75V11.25C11.5 11.3881 11.3881 11.5 11.25 11.5H4.75C4.61193 11.5 4.5 11.3881 4.5 11.25L4.5 4.75C4.5 4.61193 4.61193 4.5 4.75 4.5H6.25H7V3H6.25H4.75C3.7835 3 3 3.7835 3 4.75V11.25C3 12.2165 3.7835 13 4.75 13H11.25C12.2165 13 13 12.2165 13 11.25V9.75V9H11.5V9.75ZM8.5 3H9.25H12.2495C12.6637 3 12.9995 3.33579 12.9995 3.75V6.75V7.5H11.4995V6.75V5.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L10.4388 4.5H9.25H8.5V3Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </section>
+    </template>
+
+    <template id="project-detail-template">
+        <div class="project-detail">
+            <div class="project-detail__images">
+                <img src="images/img-10.avif" alt="Imagen del proyecto" class="project-detail__image">
             </div>
-            <nav class="nav nav--footer">
-                <a class="nav__link" href="#">Términos de uso</a>
-                <a class="nav__link" href="#">Política de privacidad</a>
-                <a class="nav__link" href="#">Contacto</a>
-            </nav>
+            <h2 class="project-detail__title">Portfolio Blog Starter</h2>
+            <p class="project-detail__description">Esta es una plantilla de sitio de portafolio con blog incluido. Incluye:</p>
+            <ul>
+                <li>Compatibilidad con MDX y Markdown</li>
+                <li>Optimizado para SEO (mapa del sitio, robots, esquema JSON-LD)</li>
+                <li>Fuente RSS</li>
+                <li>Imágenes OG dinámicas</li>
+                <li>Resaltado de sintaxis</li>
+                <li>Tailwind v4</li>
+                <li>Análisis de velocidad de Vercel / Análisis web</li>
+                <li>Fuente Geist</li>
+            </ul>
+            <h3>Demostración</h3>
+            <p><a href="https://portfolio-blog-starter.vercel.app">https://portfolio-blog-starter.vercel.app</a></p>
+            <h3>Cómo usar</h3>
+            <p>Puede elegir uno de los dos métodos siguientes para utilizar este repositorio:</p>
+            <h3>Implementación con un solo clic</h3>
+            <p>Implemente el ejemplo usando <a href="https://vercel.com/?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples">Vercel:</a></p>
+            <h3>Clonar y Implementar</h3>
+            <p>Ejecute <code>create-next-app</code> con <a href="http://pnpm.io/installation">pnpm</a> para iniciar el ejemplo:</p>
+            <pre><code>pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog</code></pre>
+            <p>Luego, ejecute Next.js en modo de desarrollo:</p>
+            <pre><code>pnpm dev</code></pre>
+            <p>Impléndelo en la nube con <a href="https://vercel.com/templates">Vercel</a> <a href="https://nextjs.org/docs/app/building-your-application/deploying">(Documentación)</a>.</p>
         </div>
-    </footer>
+    </template>
+
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
