@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Project Alpha",
+            "description": "This is the first project.",
+            "repository": "https://example.com/repo1",
+            "image": "images/img-1.avif",
+            "url": "https://example.com/project1"
+        },
+        {
+            "id": 2,
+            "name": "Project Beta",
+            "description": "This is the second project.",
+            "repository": "https://example.com/repo2",
+            "image": "https://example.com/image2.png",
+            "url": "https://example.com/project3"
+        },
+        {
+            "id": 3,
+            "name": "Project Gamma",
+            "description": "This is the third project.",
+            "repository": "https://example.com/repo3",
+            "image": "https://example.com/image3.png",
+            "url": "https://example.com/project3"
+        }
+    ]
+}
